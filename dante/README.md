@@ -12,7 +12,7 @@ network connectivity.
 dante:
   image: cpfd/dante
   ports:
-    - "1080:1080"
+    - "55555:55555"
   volumes:
     - ./sockd.conf:/etc/sockd.conf
   restart: always
@@ -26,7 +26,7 @@ dante:
 ```
 debug: 0
 logoutput: stderr
-internal: 0.0.0.0 port = 1080
+internal: 0.0.0.0 port = 55555
 external: eth0
 socksmethod: username 
 clientmethod: none
@@ -48,10 +48,10 @@ socks pass {
 ## quick dante server from command line
 
 ```
-$ docker run -d --name dante -p 1080:1080 -e PROXY_USER=user -e PROXY_PASSWORD=secret cpfd/dante
+$ docker run -d --name dante -p 55555:55555 -e PROXY_USER=user -e PROXY_PASSWORD=secret cpfd/dante
 
 
-$ curl --proxy socks5://user:secret@localhost:1080 http://ip.jsontest.com
+$ curl --proxy socks5://user:secret@localhost:55555 http://ip.jsontest.com
 ```
 
 [1]: http://www.inet.no/dante/index.html
