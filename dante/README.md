@@ -48,7 +48,7 @@ socks pass {
 ## quick dante server from command line
 
 ```
-$ docker run -d --name dante -p 55555:55555 -e PROXY_USER=user -e PROXY_PASSWORD=secret cpfd/dante
+$ docker run -d --name dante -p 55555:55555 -e PROXY_USER=user -e PROXY_PASSWORD=secret c29r3/danted
 
 
 $ curl --proxy socks5://user:secret@localhost:55555 http://ip.jsontest.com
