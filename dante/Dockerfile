@@ -30,7 +30,7 @@ ENV CFGFILE /etc/sockd.conf
 ENV PIDFILE /tmp/sockd.pid
 ENV WORKERS 10
 
-EXPOSE 1080
+EXPOSE 55555
 
 ENTRYPOINT /entrypoint.sh
 CMD sockd -f $CFGFILE -p $PIDFILE -N $WORKERS
