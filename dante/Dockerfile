@@ -16,9 +16,10 @@ RUN set -xe \
         && curl -sSL $DANTE_URL -o $DANTE_FILE \
         && echo "$DANTE_SHA *$DANTE_FILE" | shasum -c \
         && tar xzf $DANTE_FILE --strip 1 \
+        && cd dante \
         && ./configure \
         && make install \
-        && cd .. \
+        && cd ../.. \
         && rm -rf $DANTE_TEMP \
     && apt-get purge -y --auto-remove $DANTE_DEPS \
     && rm -rf /var/lib/apt/lists/*
