@@ -2,8 +2,8 @@ FROM debian:jessie
 MAINTAINER Devops <devops@sprucefinance.com>
 
 ENV DANTE_VER 1.4.2
-ENV DANTE_URL https://www.inet.no/dante/files/dante-$DANTE_VER.tar.gz
-ENV DANTE_SHA baa25750633a7f9f37467ee43afdf7a95c80274394eddd7dcd4e1542aa75caad
+ENV DANTE_URL https://github.com/notpeter/dante/archive/dante-$DANTE_VER.tar.gz
+ENV DANTE_SHA eb5890dab4a353bf8c4248a4bc8e3058d8ad474b
 ENV DANTE_FILE dante.tar.gz
 ENV DANTE_TEMP dante
 ENV DANTE_DEPS build-essential curl
